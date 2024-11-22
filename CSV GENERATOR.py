@@ -9,6 +9,12 @@ def generate_csv(filename, headers, data, delimiter=','):
     :param data: Liste de listes contenant les données.
     :param delimiter: Délimiteur utilisé dans le CSV (par défaut: ',').
     """
+    print(f"Quel delimiter voulez-vous utiliser ? (par défaut: ',')")
+    delimiter = input()
+    if delimiter == '':
+        delimiter = ','
+    
+
     try:
         # Ouverture du fichier en mode écriture
         with open(filename, mode='w', newline='', encoding='utf-8') as file:
